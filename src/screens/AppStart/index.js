@@ -8,6 +8,7 @@
 
 import React, { Fragment } from 'react';
 import { SafeAreaView, StyleSheet, ScrollView, View, Text, StatusBar } from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
 
 import {
   Header,
@@ -19,6 +20,18 @@ import {
 import { t } from '../../i18n/i18n';
 
 const styles = StyleSheet.create({
+  linearGradient: {
+    flex: 1,
+    paddingLeft: 15,
+    paddingRight: 15,
+  },
+  buttonText: {
+    fontSize: 18,
+    textAlign: 'center',
+    margin: 10,
+    color: '#ffffff',
+    backgroundColor: 'transparent',
+  },
   scrollView: {
     backgroundColor: Colors.lighter,
   },
@@ -78,6 +91,17 @@ const App = () => {
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
               <Text style={styles.helloWorld}>{t('helloWorld')}</Text>
+            </View>
+            <View style={styles.sectionContainer}>
+              <LinearGradient
+                locations={[0, 0.5, 1]}
+                start={{ x: 0, y: 0 }}
+                end={{ x: 1, y: 0 }}
+                colors={['#F47133', '#BC3081', '#4E61C1']}
+                style={styles.linearGradient}
+              >
+                <Text style={styles.buttonText}>Linear Gradient</Text>
+              </LinearGradient>
             </View>
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>Step One</Text>
