@@ -17,8 +17,6 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-import FacebookIcon from '../../assets/icons/facebook.svg';
-
 const styles = StyleSheet.create({
   scrollView: {
     backgroundColor: Colors.lighter,
@@ -77,7 +75,6 @@ const App = () => {
                 Edit <Text style={styles.highlight}>App.js</Text> to change this screen and then
                 come back to see your edits.
               </Text>
-              <FacebookIcon />
             </View>
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>See Your Changes</Text>
