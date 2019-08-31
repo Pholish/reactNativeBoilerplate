@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {TouchableWithoutFeedback} from 'react-native';
+import { TouchableWithoutFeedback } from 'react-native';
 
-import {ViewStyled, TextStyled} from './styles';
+import { ViewStyled, TextStyled } from './styles';
 
 const buttonSimple = props => {
-  const {buttonProps, textProps, children} = props;
-  const {onPress, ...restButtonProps} = buttonProps;
+  const { buttonProps, textProps, children } = props;
+  const { onPress, ...restButtonProps } = buttonProps;
   return (
     <ViewStyled {...restButtonProps}>
       <TouchableWithoutFeedback onPress={onPress}>

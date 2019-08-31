@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import DatePicker from 'react-native-datepicker';
 // import colors from '../../constants/colors';
 
-import {ViewStyled, StyledLabel, styles} from './styles';
+import { ViewStyled, StyledLabel, styles } from './styles';
 
 const datePicker = props => {
-  const {error, touched, viewProps, labelProps} = props;
-  let customStyles = {...styles};
+  const { error, touched, viewProps, labelProps } = props;
+  let customStyles = { ...styles };
 
   if (error) {
     customStyles = {

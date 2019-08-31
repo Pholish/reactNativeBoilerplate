@@ -14,8 +14,8 @@ import {
 import colors from '../../constants/colors';
 
 const renderRadio = (item, index, value, props) => {
-  const {radioViewProps, radioButtonProps, radioTextProps} = props;
-  const {onPress, ...buttonProps} = radioButtonProps;
+  const { radioViewProps, radioButtonProps, radioTextProps } = props;
+  const { onPress, ...buttonProps } = radioButtonProps;
 
   let active = false;
   let buttonBgColor = colors.mainRadioGroupBg;
@@ -28,14 +28,13 @@ const renderRadio = (item, index, value, props) => {
   }
 
   return (
-    <RadioView
-      {...radioViewProps}
-      key={`radio_group_item_${index}_${item.id}_${item.value}`}>
+    <RadioView {...radioViewProps} key={`radio_group_item_${index}_${item.id}_${item.value}`}>
       <RadioButton
         {...buttonProps}
         onPress={() => onPress(item.value)}
         bgColor={buttonBgColor}
-        disabled={active}>
+        disabled={active}
+      >
         <RadioText {...radioTextProps} color={textColor}>
           {item.label}
         </RadioText>
@@ -70,9 +69,7 @@ const radioGroup = props => {
           });
         })}
       </GroupContainer>
-      {!!helperText && error && (
-        <HelperText error={error}>{helperText}</HelperText>
-      )}
+      {!!helperText && error && <HelperText error={error}>{helperText}</HelperText>}
     </RadioContainer>
   );
 };

@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-import {TouchableOpacity, Text} from 'react-native';
+import { TouchableOpacity, Text } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
 import colors from '../../constants/colors';

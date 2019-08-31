@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import colors from '../../constants/colors';
-import {ViewStyled, SearchIconStyled, StyledInput} from './styles';
+import { ViewStyled, SearchIconStyled, StyledInput } from './styles';
 
 const searchInput = props => {
-  const {viewProps, inputProps} = props;
+  const { viewProps, inputProps } = props;
 
   return (
     <ViewStyled {...viewProps}>

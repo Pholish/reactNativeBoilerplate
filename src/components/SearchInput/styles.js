@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-import {View, TextInput} from 'react-native';
+import { View, TextInput } from 'react-native';
 
 import SearchIcon from '../../assets/icons/search.svg';
 import colors from '../../constants/colors';

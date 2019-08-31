@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-import {View, TextInput, Text} from 'react-native';
+import { View, TextInput, Text } from 'react-native';
 
 import colors from '../../constants/colors';
 

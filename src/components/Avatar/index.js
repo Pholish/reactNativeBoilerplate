@@ -1,12 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Image} from 'react-native';
+import { Image } from 'react-native';
 
-const avatar = ({size, ...restProps}) => (
-  <Image
-    {...restProps}
-    style={{width: size, height: size, borderRadius: size / 2}}
-  />
+const avatar = ({ size, ...restProps }) => (
+  <Image {...restProps} style={{ width: size, height: size, borderRadius: size / 2 }} />
 );
 
 avatar.defaultProps = {

@@ -1,1 +1,1 @@
-export {userVerifyPhoneNumber} from './auth';
+export { userVerifyPhoneNumber as default } from './auth';

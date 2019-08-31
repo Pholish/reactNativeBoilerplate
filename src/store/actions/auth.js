@@ -15,3 +15,5 @@ export const userVerifyPhoneNumber = param => {
     },
   };
 };
+
+export default userVerifyPhoneNumber;

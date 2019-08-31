@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {ViewStyled, StyledLabel, StyledInput} from './styles';
+import { ViewStyled, StyledLabel, StyledInput } from './styles';
 
 import colors from '../../constants/colors';
 
 const maskedInput = props => {
-  const {viewProps, labelProps, inputProps, options} = props;
+  const { viewProps, labelProps, inputProps, options } = props;
   return (
     <ViewStyled {...viewProps}>
       <StyledLabel {...labelProps} />
@@ -26,7 +26,7 @@ maskedInput.defaultProps = {
   viewProps: {},
   labelProps: {},
   inputProps: {},
-  options: {mask: '+380 99 999 99 99'},
+  options: { mask: '+380 99 999 99 99' },
 };
 
 maskedInput.propTypes = {

@@ -1,8 +1,8 @@
-import {Navigation} from 'react-native-navigation';
+import { Navigation } from 'react-native-navigation';
 
 import registerScreens from './src/screens/registerScreens';
-import {setRoot, defaultOptions} from './src/utility/navigation';
-import {APP_START} from './src/constants/screens';
+import { setRoot, defaultOptions } from './src/utility/navigation';
+import { APP_START } from './src/constants/screens';
 
 // set Default Options for React Native Navigation
 

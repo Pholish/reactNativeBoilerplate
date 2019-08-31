@@ -4,13 +4,7 @@ import PropTypes from 'prop-types';
 import colors from '../../constants/colors';
 import CrossIcon from '../../assets/icons/cross.svg';
 import CheckIcon from '../../assets/icons/check.svg';
-import {
-  ChipsContainer,
-  ChipView,
-  ChipButton,
-  IconContainer,
-  ChipText,
-} from './styles';
+import { ChipsContainer, ChipView, ChipButton, IconContainer, ChipText } from './styles';
 
 function setTheme(type) {
   let theme;
@@ -47,7 +41,7 @@ function setTheme(type) {
 }
 
 function renderChip(chip, index, theme, type, restProps) {
-  const {viewProps, buttonProps, textProps, selected, onChange} = restProps;
+  const { viewProps, buttonProps, textProps, selected, onChange } = restProps;
   const checked = selected.includes(chip.id);
 
   if (type === 'onlySelected' && !checked) {
@@ -90,7 +84,8 @@ function renderChip(chip, index, theme, type, restProps) {
         {...buttonProps}
         checked={checked}
         onPress={() => handleChip(chip.id, checked)}
-        bgColor={buttonBgColor}>
+        bgColor={buttonBgColor}
+      >
         {checked && (
           <IconContainer>
             <InnerIcon color={textColor} width="100%" />
@@ -104,7 +99,7 @@ function renderChip(chip, index, theme, type, restProps) {
   );
 }
 
-function chips({containerProps, data, type, ...restProps}) {
+function chips({ containerProps, data, type, ...restProps }) {
   const theme = setTheme(type);
 
   return (

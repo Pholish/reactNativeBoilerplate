@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 // ASSETS
@@ -22,26 +22,22 @@ class SecretIcon extends Component {
 
   handleShow = () => {
     this.setState(prevState => {
-      return {...prevState, show: !prevState.show};
+      return { ...prevState, show: !prevState.show };
     });
   };
 
   render() {
-    const {show} = this.state;
-    const {viewProps, labelProps, inputProps, helperText, error} = this.props;
+    const { show } = this.state;
+    const { viewProps, labelProps, inputProps, helperText, error } = this.props;
 
     return (
       <ViewStyled {...viewProps}>
         <StyledLabel {...labelProps} />
         <InputView {...inputProps}>
           <StyledInput {...inputProps} secureTextEntry={!show} />
-          <StyledButton onPress={this.handleShow}>
-            {show ? <EyeOn /> : <EyeOff />}
-          </StyledButton>
+          <StyledButton onPress={this.handleShow}>{show ? <EyeOn /> : <EyeOff />}</StyledButton>
         </InputView>
-        {!!helperText && error && (
-          <HelperText error={error}>{helperText}</HelperText>
-        )}
+        {!!helperText && error && <HelperText error={error}>{helperText}</HelperText>}
       </ViewStyled>
     );
   }

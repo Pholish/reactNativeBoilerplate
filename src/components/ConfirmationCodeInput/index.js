@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CodeFiled from 'react-native-confirmation-code-field';
 
-import {ViewStyled, HelperText, styles} from './styles';
+import { ViewStyled, HelperText, styles } from './styles';
 
 /**
  * help customize Cells.
@@ -23,8 +23,8 @@ const cellPropsGen = error => {
 };
 
 const сonfirmationCodeInput = React.forwardRef((props, ref) => {
-  const {helperText, error} = props;
-  const containerProps = {style: styles.inputWrapStyle};
+  const { helperText, error } = props;
+  const containerProps = { style: styles.inputWrapStyle };
 
   const cellProps = cellPropsGen(error);
 
@@ -40,9 +40,7 @@ const сonfirmationCodeInput = React.forwardRef((props, ref) => {
         space={10}
         {...props}
       />
-      {!!helperText && error && (
-        <HelperText error={error}>{helperText}</HelperText>
-      )}
+      {!!helperText && error && <HelperText error={error}>{helperText}</HelperText>}
     </ViewStyled>
   );
 });

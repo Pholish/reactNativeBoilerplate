@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
-import {View, Text} from 'react-native';
-import {TextInputMask} from 'react-native-masked-text';
+import { View, Text } from 'react-native';
+import { TextInputMask } from 'react-native-masked-text';
 
 import colors from '../../constants/colors';
 

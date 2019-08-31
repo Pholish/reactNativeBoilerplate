@@ -8,7 +8,7 @@ import {
   StyleSheet,
   TouchableWithoutFeedback,
 } from 'react-native';
-import {Container, Content} from 'native-base';
+import { Container, Content } from 'native-base';
 
 import Wrapper from './styles';
 
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
 });
 
 const layout = props => {
-  const {safeAreaView, aware} = props;
+  const { safeAreaView, aware } = props;
   if (aware) {
     return (
       <Container>
@@ -42,7 +42,8 @@ const layout = props => {
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : null}
         style={styles.keyboardAvoidingView}
-        {...props}>
+        {...props}
+      >
         <SafeAreaView style={styles.container}>
           <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
             <Wrapper {...props} />
@@ -56,7 +57,8 @@ const layout = props => {
     <KeyboardAvoidingView
       behavior={Platform.OS === 'ios' ? 'padding' : null}
       style={styles.container}
-      {...props}>
+      {...props}
+    >
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <Wrapper {...props} />
       </TouchableWithoutFeedback>

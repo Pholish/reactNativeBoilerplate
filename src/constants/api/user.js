@@ -4,3 +4,5 @@
  * Accept: application / json;
  */
 export const EXAPLE_API = '';
+
+export default EXAPLE_API;

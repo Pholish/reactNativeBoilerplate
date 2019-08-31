@@ -1,6 +1,6 @@
 // USERROLE_SCREENNAME = APPNAME.USERROLE.SCREENNAME
 
-import {name as appName} from '../../app.json';
+import { name as appName } from '../../app.json';
 
 // COMMON SCREENS
 export const APP_START = `${appName}.AppStart`;
