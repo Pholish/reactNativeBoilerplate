@@ -16,6 +16,7 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import { t } from '../../i18n/i18n';
 
 const styles = StyleSheet.create({
   scrollView: {
@@ -31,6 +32,12 @@ const styles = StyleSheet.create({
   sectionContainer: {
     marginTop: 32,
     paddingHorizontal: 24,
+  },
+  helloWorld: {
+    fontSize: 30,
+    fontWeight: '700',
+    color: Colors.black,
+    textAlign: 'center',
   },
   sectionTitle: {
     fontSize: 24,
@@ -69,6 +76,9 @@ const App = () => {
             </View>
           )}
           <View style={styles.body}>
+            <View style={styles.sectionContainer}>
+              <Text style={styles.helloWorld}>{t('helloWorld')}</Text>
+            </View>
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>Step One</Text>
               <Text style={styles.sectionDescription}>

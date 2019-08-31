@@ -28,7 +28,8 @@ target 'reactNativeBoilerplate' do
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
   pod 'ReactNativeNavigation', :podspec => '../node_modules/react-native-navigation/ReactNativeNavigation.podspec'
-  
+  pod 'RNI18n', :path => '../node_modules/react-native-i18n'
+
   target 'reactNativeBoilerplateTests' do
     inherit! :search_paths
     # Pods for testing
