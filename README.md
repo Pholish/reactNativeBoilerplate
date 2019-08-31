@@ -5,9 +5,9 @@
 
 ### Setup
 
-yarn
-react-native run-ios
-react-native run-android
+`yarn`
+`react-native run-ios`
+`react-native run-android`
 
 ### Third Party Libraries
 
