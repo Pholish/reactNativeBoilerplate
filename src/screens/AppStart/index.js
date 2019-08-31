@@ -9,6 +9,7 @@
 import React, { Fragment } from 'react';
 import { SafeAreaView, StyleSheet, ScrollView, View, Text, StatusBar } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
+import Icon from 'react-native-vector-icons/dist/FontAwesome';
 
 import {
   Header,
@@ -102,6 +103,13 @@ const App = () => {
               >
                 <Text style={styles.buttonText}>Linear Gradient</Text>
               </LinearGradient>
+            </View>
+            <View style={styles.sectionContainer}>
+              <Text style={styles.sectionTitle}>Vector Icons</Text>
+              <Icon name="facebook" size={30} />
+              <Icon.Button name="facebook" backgroundColor="#3b5998" size={30}>
+                Button Vector Icons
+              </Icon.Button>
             </View>
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>Step One</Text>

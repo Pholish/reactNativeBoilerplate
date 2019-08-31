@@ -30,6 +30,7 @@ target 'reactNativeBoilerplate' do
   pod 'ReactNativeNavigation', :podspec => '../node_modules/react-native-navigation/ReactNativeNavigation.podspec'
   pod 'RNI18n', :path => '../node_modules/react-native-i18n'
   pod 'BVLinearGradient', :path => '../node_modules/react-native-linear-gradient'
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
   
   target 'reactNativeBoilerplateTests' do
     inherit! :search_paths
