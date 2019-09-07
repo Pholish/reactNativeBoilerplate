@@ -1,81 +1,84 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import {
-  Keyboard,
-  KeyboardAvoidingView,
-  Platform,
-  SafeAreaView,
-  StyleSheet,
-  TouchableWithoutFeedback,
-} from 'react-native';
-import { Container, Content } from 'native-base';
+import { Keyboard, Platform, TouchableWithoutFeedback } from 'react-native';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+import SplashScreen from 'react-native-splash-screen';
 
-import Wrapper from './styles';
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  content: {
-    flexGrow: 1,
-  },
-  keyboardAvoidingView: {
-    flex: 1,
-    width: '100%',
-  },
-});
+import Wrapper, {
+  StyledSafeAreaView,
+  StyledKeyboardAvoidingView,
+  StyledScrollView,
+} from './styles';
 
 const layout = props => {
-  const { safeAreaView, aware } = props;
+  const { keyboardProps, safeAreaView, aware, awareProps, scroll } = props;
+
+  // Effects
+  useEffect(() => {
+    SplashScreen.hide();
+  }, []); // DidMount
+
   if (aware) {
     return (
-      <Container>
-        <SafeAreaView style={styles.container}>
-          <Content contentContainerStyle={styles.content} {...props} />
-        </SafeAreaView>
-      </Container>
+      <StyledSafeAreaView>
+        <KeyboardAwareScrollView {...awareProps}>
+          <Wrapper {...props} />
+        </KeyboardAwareScrollView>
+      </StyledSafeAreaView>
     );
   }
 
   if (safeAreaView) {
     return (
-      <KeyboardAvoidingView
-        behavior={Platform.OS === 'ios' ? 'padding' : null}
-        style={styles.keyboardAvoidingView}
-        {...props}
-      >
-        <SafeAreaView style={styles.container}>
+      <StyledSafeAreaView>
+        <StyledKeyboardAvoidingView
+          behavior={Platform.OS === 'ios' ? 'padding' : null}
+          {...keyboardProps}
+        >
           <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-            <Wrapper {...props} />
+            {scroll ? (
+              <StyledScrollView
+                keyboardShouldPersistTaps="handled"
+                keyboardDismissMode="on-drag"
+                showsVerticalScrollIndicator={false}
+              >
+                <Wrapper {...props} />
+              </StyledScrollView>
+            ) : (
+              <Wrapper {...props} />
+            )}
           </TouchableWithoutFeedback>
-        </SafeAreaView>
-      </KeyboardAvoidingView>
+        </StyledKeyboardAvoidingView>
+      </StyledSafeAreaView>
     );
   }
 
   return (
-    <KeyboardAvoidingView
+    <StyledKeyboardAvoidingView
       behavior={Platform.OS === 'ios' ? 'padding' : null}
-      style={styles.container}
-      {...props}
+      {...keyboardProps}
     >
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <Wrapper {...props} />
       </TouchableWithoutFeedback>
-    </KeyboardAvoidingView>
+    </StyledKeyboardAvoidingView>
   );
 };
 
 layout.defaultProps = {
+  keyboardProps: {},
   safeAreaView: true,
   aware: false,
+  awareProps: {},
+  scroll: true,
 };
 
 layout.propTypes = {
-  behavior: PropTypes.string,
-  enabled: PropTypes.bool,
+  keyboardProps: PropTypes.object,
   safeAreaView: PropTypes.bool,
   aware: PropTypes.bool,
+  awareProps: PropTypes.object,
+  scroll: PropTypes.bool,
 };
 
 export default layout;
