@@ -23,9 +23,16 @@ import Layout from '../../hoc/Layout';
 
 const styles = StyleSheet.create({
   linearGradient: {
-    flex: 1,
+    width: '100%',
     paddingLeft: 15,
     paddingRight: 15,
+    height: 50,
+  },
+  linearGradientContainer: {
+    overflow: 'hidden',
+    marginTop: 32,
+    paddingHorizontal: 24,
+    alignItems: 'flex-start',
   },
   buttonText: {
     fontSize: 18,
@@ -37,6 +44,7 @@ const styles = StyleSheet.create({
   sectionContainer: {
     marginTop: 32,
     paddingHorizontal: 24,
+    alignItems: 'flex-start',
   },
   helloWorld: {
     fontSize: 30,
@@ -69,7 +77,7 @@ const App = () => {
       <View style={styles.sectionContainer}>
         <Text style={styles.helloWorld}>{t('helloWorld')}</Text>
       </View>
-      <View style={styles.sectionContainer}>
+      <View style={styles.linearGradientContainer}>
         <LinearGradient
           locations={[0, 0.5, 1]}
           start={{ x: 0, y: 0 }}

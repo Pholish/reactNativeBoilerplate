@@ -5,7 +5,7 @@
 
 ### Setup
 
-`yarn && cd ios/ && pod install && cd ..`
+`yarn && react-native link && cd ios/ && pod install && cd ..`
 
 `Open android studio. If you faced with issue related react-native-i18n, remove this field <uses-sdk android:minSdkVersion="16" /> and rebuild app`
 
@@ -20,3 +20,7 @@
 - "react-native-navigation": "^3.1.2",
 - "react-native-svg": "^9.6.2",
 - "react-native-vector-icons": "^6.6.0",
+
+### Some issues
+
+`If you have issue like: Keystore file '/Project-Folder/android/app/debug.keystore' not found for signing config 'debug'. Download this file https://raw.githubusercontent.com/facebook/react-native/master/template/android/app/debug.keystore (or from official template) and put debug.keystore in the android/app/ directory`
