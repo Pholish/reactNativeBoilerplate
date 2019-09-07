@@ -15,12 +15,13 @@
 
 ### Third Party Libraries
 
-- "react-native-i18n": "^2.0.15",
-- "react-native-linear-gradient": "^2.5.6",
-- "react-native-navigation": "^3.1.2",
-- "react-native-svg": "^9.6.2",
-- "react-native-vector-icons": "^6.6.0",
+- "react-native-i18n": "^2.0.15"
+- "react-native-linear-gradient": "^2.5.6"
+- "react-native-navigation": "^3.1.2"
+- "react-native-svg": "^9.6.2"
+- "react-native-vector-icons": "^6.6.0"
+- "react-native-splash-screen": "^3.2.0"
 
 ### Some issues
 
-`If you have issue like: Keystore file '/Project-Folder/android/app/debug.keystore' not found for signing config 'debug'. Download this file https://raw.githubusercontent.com/facebook/react-native/master/template/android/app/debug.keystore (or from official template) and put debug.keystore in the android/app/ directory`
+If you have issue like: `Keystore file '/Project-Folder/android/app/debug.keystore' not found for signing config 'debug'`. Download [debug.keystore file](https://raw.githubusercontent.com/facebook/react-native/master/template/android/app/debug.keystore) (or from official template) and put debug.keystore in the `android/app/` directory
