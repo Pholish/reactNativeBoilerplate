@@ -10,6 +10,7 @@ import React from 'react';
 import { StyleSheet, View, Text, StatusBar } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
+import MapView /* ,{ PROVIDER_GOOGLE } */ from 'react-native-maps'; // uncomment PROVIDER_GOOGLE import if want to use Google Maps
 
 import {
   Header,
@@ -66,6 +67,18 @@ const styles = StyleSheet.create({
   highlight: {
     fontWeight: '700',
   },
+  mapContainer: {
+    ...StyleSheet.absoluteFillObject,
+    position: 'relative',
+    height: 400,
+    width: 400,
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    marginTop: 32,
+  },
+  map: {
+    ...StyleSheet.absoluteFillObject,
+  },
 });
 
 const App = () => {
@@ -77,6 +90,34 @@ const App = () => {
       <View style={styles.sectionContainer}>
         <Text style={styles.helloWorld}>{t('helloWorld')}</Text>
       </View>
+
+      {/* <View style={styles.mapContainer}>
+        <MapView
+          provider={PROVIDER_GOOGLE}
+          style={styles.map}
+          initialRegion={{
+            latitude: 37.78825,
+            longitude: -122.4324,
+            latitudeDelta: 0.0922,
+            longitudeDelta: 0.0421,
+          }}
+        />
+      </View> */}
+      <View style={styles.sectionContainer}>
+        <Text style={styles.sectionTitle}>React native maps</Text>
+      </View>
+      <View style={styles.mapContainer}>
+        <MapView
+          style={styles.map}
+          initialRegion={{
+            latitude: 37.78825,
+            longitude: -122.4324,
+            latitudeDelta: 0.0922,
+            longitudeDelta: 0.0421,
+          }}
+        />
+      </View>
+
       <View style={styles.linearGradientContainer}>
         <LinearGradient
           locations={[0, 0.5, 1]}
