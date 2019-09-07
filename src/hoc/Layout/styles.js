@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-import { KeyboardAvoidingView, SafeAreaView, View, ScrollView } from 'react-native';
+import { View } from 'react-native';
 
 import colors from '../../constants/colors';
 
@@ -25,21 +25,6 @@ const Wrapper = styled(View)`
 
   justify-content: ${p => p.justifyContent || 'flex-start'};
   align-items: ${p => p.alignItems || 'center'};
-`;
-
-export const StyledKeyboardAvoidingView = styled(KeyboardAvoidingView)`
-  flex: 1;
-  width: 100%;
-`;
-
-export const StyledSafeAreaView = styled(SafeAreaView)`
-  flex: 1;
-  background-color: ${colors.mainBg};
-`;
-
-export const StyledScrollView = styled(ScrollView)`
-  flex: 1;
-  width: 100%;
 `;
 
 export default Wrapper;
