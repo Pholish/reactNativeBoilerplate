@@ -5,7 +5,9 @@
 
 ### Setup
 
-`yarn`
+`yarn && cd ios/ && pod install && cd ..`
+
+`Open android studio. If you faced with issue related react-native-i18n, remove this field <uses-sdk android:minSdkVersion="16" /> and rebuild app`
 
 `react-native run-ios`
 
