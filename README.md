@@ -21,6 +21,7 @@ Open android studio. If you faced with issue related `react-native-i18n`, remove
 - "react-native-svg": "^9.6.2"
 - "react-native-vector-icons": "^6.6.0"
 - "react-native-splash-screen": "^3.2.0"
+- "react-native-maps": "0.25.0" `WORKS ONLY FOR IOS (ANDROID BROKEN)`
 
 ### Some issues
 
