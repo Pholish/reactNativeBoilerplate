@@ -11,7 +11,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 //  If you want to enable Google Maps on iOS
-//  [GMSServices provideAPIKey:@"GOOGLE_MAPS_API_KEY"]; // add this line using the api key obtained from Google Console
+ [GMSServices provideAPIKey:@"AIzaSyB7WB0NvAhdA1V_WSAjMdMoTD-vUG7-E6Y"]; // add this line using the api key obtained from Google Console
   
   NSURL *jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
   [ReactNativeNavigation bootstrap:jsCodeLocation launchOptions:launchOptions];
