@@ -19,6 +19,7 @@ import com.horcrux.svg.SvgPackage;
 import com.AlexanderZaytsev.RNI18n.RNI18nPackage;
 import com.BV.LinearGradient.LinearGradientPackage;
 import org.devio.rn.splashscreen.SplashScreenReactPackage;
+import com.airbnb.android.react.maps.MapsPackage;
 
 import java.util.Arrays;
 import java.util.List;
@@ -45,7 +46,7 @@ public class MainApplication extends NavigationApplication {
     // Add additional packages you require here
     // No need to add RnnPackage and MainReactPackage
     return Arrays.<ReactPackage>asList(new SvgPackage(), new RNI18nPackage(), new LinearGradientPackage(),
-        new SplashScreenReactPackage());
+        new SplashScreenReactPackage(), new MapsPackage());
   }
 
   @Override

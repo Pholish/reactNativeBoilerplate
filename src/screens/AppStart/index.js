@@ -10,7 +10,7 @@ import React from 'react';
 import { StyleSheet, View, Text, StatusBar } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
-import MapView /* ,{ PROVIDER_GOOGLE } */ from 'react-native-maps'; // uncomment PROVIDER_GOOGLE import if want to use Google Maps
+import MapView, { PROVIDER_GOOGLE } from 'react-native-maps'; // uncomment PROVIDER_GOOGLE import if want to use Google Maps
 
 import {
   Header,
@@ -91,7 +91,7 @@ const App = () => {
         <Text style={styles.helloWorld}>{t('helloWorld')}</Text>
       </View>
 
-      {/* <View style={styles.mapContainer}>
+      <View style={styles.mapContainer}>
         <MapView
           provider={PROVIDER_GOOGLE}
           style={styles.map}
@@ -102,7 +102,7 @@ const App = () => {
             longitudeDelta: 0.0421,
           }}
         />
-      </View> */}
+      </View>
       <View style={styles.sectionContainer}>
         <Text style={styles.sectionTitle}>React native maps</Text>
       </View>
