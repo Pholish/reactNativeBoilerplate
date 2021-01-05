@@ -17,7 +17,7 @@
     "init-project": "yarn && react-native link && yarn pod-install"
   },
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "formik": "^1.5.8",
     "moment": "^2.24.0",
     "native-base": "^2.13.4",
